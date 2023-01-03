@@ -13,6 +13,8 @@
 		<link href="./css/auth.css" rel="stylesheet" />
 
 		<script src="https://kit.fontawesome.com/0138e10fbd.js" crossorigin="anonymous"></script>
+		<script src="/scripts/login.js" type="module"></script>
+		<script src="/scripts/index.js" type="module"></script>
 	</head>
 	<body>
 		<header class="header">
@@ -37,10 +39,12 @@
 				<form class="form" id="login-form">
 					<label>Вход</label>
 					<input class="field" type="text" placeholder="Username" name="username" id="username" required />
-					<span class="errorMsg" id="username-err"></span>
+					<!-- <span class="errorMsg hidden" id="username-err">Не съществува потребител с това потребителско име</span> -->
 					<input class="field" type="password" placeholder="Password" name="password" id="password" required />
-					<span class="errorMsg" id="password-err"></span>
-					<span class="errorMsg" id="credentials-err"></span>
+					<!-- <span class="errorMsg hidden" id="password-err"></span> -->
+					<span class="errorMsg hidden" id="credentials-err"
+						>Не съществува потребител с такива потребителско име и парола</span
+					>
 					<input class="btn" type="submit" value="Вход" name="login" />
 				</form>
 			</section>

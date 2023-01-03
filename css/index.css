@@ -47,6 +47,10 @@ h2 {
 	letter-spacing: normal;
 }
 
+.hidden {
+	display: none;
+}
+
 /* ======== RESPONSIVENESS ======== */
 
 @media (max-width: 870px) {

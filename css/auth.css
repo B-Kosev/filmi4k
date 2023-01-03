@@ -61,7 +61,7 @@ label {
 }
 
 .errorMsg {
-	display: none;
+	/* display: block; */
 	width: 50%;
 	min-width: 170px;
 	text-align: left;

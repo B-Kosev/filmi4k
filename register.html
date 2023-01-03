@@ -13,6 +13,8 @@
 		<link href="./css/auth.css" rel="stylesheet" />
 
 		<script src="https://kit.fontawesome.com/0138e10fbd.js" crossorigin="anonymous"></script>
+		<script src="/scripts/register.js" type="module"></script>
+		<script src="/scripts/index.js" type="module"></script>
 	</head>
 	<body>
 		<header class="header">
@@ -36,11 +38,11 @@
 			<form class="form" id="register-form">
 				<label>Регистрация</label>
 				<input type="text" class="field" placeholder="Username" name="username" id="username" required />
-				<span class="errorMsg" id="username-err"></span>
+				<span class="errorMsg hidden" id="username-err"></span>
 				<input type="email" class="field" placeholder="E-mail" name="email" id="email" required />
-				<span class="errorMsg" id="email-err"></span>
+				<span class="errorMsg hidden" id="email-err"></span>
 				<input type="password" class="field" placeholder="Password" name="password" id="password" required />
-				<span class="errorMsg" id="password-err"></span>
+				<span class="errorMsg hidden" id="password-err"></span>
 				<input
 					type="password"
 					class="field"
@@ -49,7 +51,7 @@
 					id="confirm-password"
 					required
 				/>
-				<span class="errorMsg" id="confirm-password-err"></span>
+				<span class="errorMsg hidden" id="confirm-password-err">Паролите не съвпадат!</span>
 				<input type="submit" value="Регистрация" class="btn" name="register" />
 			</form>
 		</section>
