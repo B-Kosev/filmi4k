@@ -21,21 +21,7 @@
 /* ======== MOVIE HEADER ======== */
 
 .movie-header {
-	position: relative;
 	display: flex;
-}
-
-.movie-info {
-	width: calc(100% - 220px);
-	position: absolute;
-	left: 210px;
-	bottom: 5px;
-	padding: 15px;
-	font-size: 1.5rem;
-	font-weight: bold;
-	text-transform: uppercase;
-	color: var(--text-on-dark-color);
-	background-color: rgba(0, 0, 0, 0.2);
 }
 
 .year {
@@ -43,19 +29,34 @@
 }
 
 .poster img {
-	display: inline;
 	/* Ratio 2:3 */
 	width: 100%;
 	height: calc((100vw - 4rem) * (3 / 2));
 	max-height: calc(200px * 3 / 2);
 }
 
+.screenshot {
+	position: relative;
+}
+
 .screenshot img {
-	display: inline;
 	/* Ratio: 21:9 */
 	width: 100%;
 	height: calc((100vw - 4rem) * (9 / 21));
 	max-height: calc(700px * 9 / 21);
+}
+
+.movie-info {
+	width: 100%;
+	position: absolute;
+	left: 0;
+	bottom: 4px;
+	padding: 15px;
+	font-size: 1.5rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: var(--text-on-dark-color);
+	background-color: rgba(0, 0, 0, 0.2);
 }
 
 /* ======== CONTENT ======== */
