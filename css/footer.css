@@ -1,6 +1,4 @@
 .footer {
-	/* position: absolute;
-	bottom: 0; */
 	width: 100%;
 	background-color: var(--text-main-color);
 	color: var(--text-on-dark-color);
@@ -14,34 +12,35 @@
 	align-items: center;
 }
 
+.footer .title {
+	font-size: 2.5rem;
+}
+
 .contact-us-wrapper {
 	text-align: center;
 	text-transform: uppercase;
 }
 
-.contact-us {
+.contact-us ul {
 	display: flex;
 	flex-wrap: wrap;
-	text-align: left;
 	text-transform: none;
 	justify-content: center;
+	margin-bottom: 0;
 }
 
-.devs,
-.github {
-	margin: 1em 1em;
+.contact-us ul li {
+	margin: 0 5px 0 5px;
 }
 
-.devs ul li a,
-.github a {
+.contact-us ul li a {
 	display: block;
 	position: relative;
 	padding: 0.2em 0;
 	overflow: hidden;
 }
 
-.devs ul li a::before,
-.github a::before {
+.contact-us ul li a::before {
 	content: "";
 	position: absolute;
 	display: block;
@@ -55,23 +54,8 @@
 	transition: transform 0.3s ease;
 }
 
-.devs a:hover::before,
-.github a:hover::before {
+.contact-us a:hover::before {
 	transform: scaleX(1);
-}
-
-.devs ul {
-	padding: 0;
-	margin: 0;
-}
-
-.devs ul li {
-	padding: 5px 0;
-}
-
-.github {
-	display: block;
-	padding: 5px 0;
 }
 
 .contact-us a {

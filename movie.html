@@ -6,19 +6,18 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<link rel="icon" href="./images/logo.png" type="image/icon type" />
+		<link rel="icon" href="/images/logo.png" type="image/icon type" />
 		<link href="./css/index.css" rel="stylesheet" />
 		<link href="./css/navigation.css" rel="stylesheet" />
 		<link href="./css/cards.css" rel="stylesheet" />
 		<link href="./css/footer.css" rel="stylesheet" />
 		<link href="./css/auth.css" rel="stylesheet" />
+		<link href="./css/movie.css" rel="stylesheet" />
 		<link href="./css/genre-nav.css" rel="stylesheet" />
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
 		<script src="https://kit.fontawesome.com/0138e10fbd.js" crossorigin="anonymous"></script>
-		<script src="/scripts/index.js" type="module"></script>
 		<script src="/scripts/database.js" type="module"></script>
-		<script src="/scripts/movies.js" type="module"></script>
+		<script src="/scripts/index.js" type="module"></script>
 	</head>
 	<body>
 		<header class="header">
@@ -63,7 +62,69 @@
 						<li><a href="" class="genre-nav-item">Индийски</a></li>
 					</ul>
 				</aside>
-				<section class="cards" id="cards"></section>
+				<article class="movie">
+					<div class="movie-header">
+						<div class="poster">
+							<img src="./images/lionKing.webp" alt="lionKing-poster" />
+						</div>
+						<div class="screenshot">
+							<img src="./images/lionking-screenshot.jpg" alt="" />
+						</div>
+						<div class="movie-info">
+							<span class="title-en">The Lion King</span>
+							<br />
+							<span class="title-bg">Цар лъв</span>
+							<br />
+							<span class="year">1994</span>
+						</div>
+					</div>
+					<div class="movie-content">
+						<h3 class="movie-title">The Lion King / Цар Лъв</h3>
+						<div class="rating">
+							<span class="fa fa-star"></span>
+							<span class="fa fa-star"></span>
+							<span class="fa fa-star"></span>
+							<span class="fa fa-star"></span>
+							<span class="fa fa-star"></span>
+						</div>
+						<div class="meta-info">
+							<div class="genre-wrapper">
+								<b>Жанр:</b>
+								<span id="genre-list">Екшън, Трилър, Драма</span>
+							</div>
+							<div class="country-wrapper">
+								<b>Държава:</b>
+								<span id="country">САЩ</span>
+							</div>
+							<div class="year-wrapper">
+								<b>Година:</b>
+								<span id="year">88</span>
+								мин.
+							</div>
+							<div class="director-wrapper">
+								<b>Режисьор:</b>
+								<span id="director">Роб Минкоф, Роджър Алърс</span>
+							</div>
+							<div class="description">
+								<b>Описание:</b>
+								<br />
+								Героичната история проследява епичните приключения на малкото лъвче Симба, което се бори да се
+								справи с отговорностите на възмъжаването и на своята предопределена роля на цар на джунглата.
+							</div>
+						</div>
+						<div class="trailer">
+							<iframe
+								width="560"
+								height="315"
+								src="https://www.youtube.com/embed/lFzVJEksoDY"
+								title="YouTube video player"
+								frameborder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+								allowfullscreen
+							></iframe>
+						</div>
+					</div>
+				</article>
 			</div>
 		</section>
 

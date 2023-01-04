@@ -12,7 +12,7 @@ get(moviesRef).then((info) => {
 	console.log(movie);
 	document.getElementById("cards").innerHTML += `
     <section class="card">
-	<a href="movie.html?name=potopen">
+	<a href="movie.html?name=${movie.title}">
 		<figure class="fig">
 			<img src=".${movie.imageUrl}" />
             <figcaption>${movie.title} (${movie.year})</figcaption>

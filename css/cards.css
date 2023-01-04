@@ -1,12 +1,22 @@
 /* ======== CARDS ======== */
 
+.content {
+	width: 80%;
+	margin: 50px auto 50px auto;
+	padding: 2%;
+	display: flex;
+	justify-content: center;
+}
+
 .cards {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	margin-top: 5%;
-	background-color: var(--bg-color);
 	flex-flow: row wrap;
+	width: 100%;
+	padding: 2%;
+	background-color: var(--bg-accented);
+	box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
 }
 
 .card {
