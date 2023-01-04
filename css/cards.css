@@ -40,6 +40,15 @@
 	color: var(--text-main-color);
 }
 
+.fa-star {
+	color: grey;
+	margin-top: 5px;
+}
+
+.checkedStar {
+	color: orange;
+}
+
 img {
 	height: 240px;
 	width: 160px;

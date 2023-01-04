@@ -33,3 +33,16 @@ export const addUser = (username, email, password) => {
 		password,
 	});
 };
+
+const addMovies = () => {
+	set(ref(database, "movies"), {
+		title: "The Lion King",
+		year: 1994,
+		description:
+			"Set in a kingdom of lions in Africa, The Lion King tells the story of Simba (Swahili for lion), a lion cub who is to succeed his father, Mufasa, as King of the Pride Lands; however, after his paternal uncle Scar kills Mufasa to seize the throne, Simba is tricked into believing he was responsible for his father's death and flees into exile. ",
+		rating: 5,
+		comments: [],
+		imageUrl: "/images/lionKing.webp",
+	});
+};
+addMovies();
