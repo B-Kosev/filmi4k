@@ -16,6 +16,7 @@
 	padding: 2%;
 	background-color: var(--bg-accented);
 	box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+	border-radius: 5px;
 }
 
 /* ======== MOVIE HEADER ======== */

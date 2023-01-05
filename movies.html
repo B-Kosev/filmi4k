@@ -1,68 +1,19 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Filmi 4k</title>
+		<script src="https://kit.fontawesome.com/0138e10fbd.js" crossorigin="anonymous"></script>
+		<script src="./js/load-components.js" type="module"></script>
+		<script src="./js/movies.js" type="module"></script>
 
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-		<link rel="icon" href="./images/logo.png" type="image/icon type" />
-		<link href="./css/index.css" rel="stylesheet" />
-		<link href="./css/navigation.css" rel="stylesheet" />
-		<link href="./css/cards.css" rel="stylesheet" />
-		<link href="./css/footer.css" rel="stylesheet" />
-		<link href="./css/auth.css" rel="stylesheet" />
 		<link href="./css/genre-nav.css" rel="stylesheet" />
 		<link href="./css/movies.css" rel="stylesheet" />
-
-		<script src="https://kit.fontawesome.com/0138e10fbd.js" crossorigin="anonymous"></script>
-		<script src="/scripts/index.js" type="module"></script>
-		<script src="/scripts/database.js" type="module"></script>
-		<script src="/scripts/movies.js" type="module"></script>
 	</head>
 	<body>
-		<header class="header">
-			<a href="index.html" class="title">Filmi <span class="title-number">4k</span></a>
-			<nav>
-				<ul class="nav">
-					<li><a href="movies.html">Филми</a></li>
-					<li><a href="top-movies.html">ТОП 10 Филми</a></li>
-				</ul>
-			</nav>
-			<ul class="auth">
-				<li id="login-parent"><a href="login.html" id="login-button">Вход</a></li>
-				<li id="register-parent"><a href="register.html" id="register-button">Регистрация</a></li>
-				<li id="greeting-parent"><span id="greeting"></span></li>
-				<li id="logout-button-parent"><a id="logout-button">Изход</a></li>
-			</ul>
-			<button class="hamburger"><i class="fa-solid fa-bars"></i></button>
-		</header>
+		<header class="header" id="header"></header>
 
 		<section class="wrapper">
 			<div class="content">
-				<aside class="genre-nav">
-					<ul>
-						<li><a href="" class="genre-nav-item">Екшън</a></li>
-						<li><a href="" class="genre-nav-item">Трилър</a></li>
-						<li><a href="" class="genre-nav-item">Драма</a></li>
-						<li><a href="" class="genre-nav-item">Комедия</a></li>
-						<li><a href="" class="genre-nav-item">Романтичен</a></li>
-						<li><a href="" class="genre-nav-item">Ужаси</a></li>
-						<li><a href="" class="genre-nav-item">Фантастика</a></li>
-						<li><a href="" class="genre-nav-item">Приключенски</a></li>
-						<li><a href="" class="genre-nav-item">Исторически</a></li>
-						<li><a href="" class="genre-nav-item">Мистерия</a></li>
-						<li><a href="" class="genre-nav-item">Фентъзи</a></li>
-						<li><a href="" class="genre-nav-item">Военен</a></li>
-						<li><a href="" class="genre-nav-item">Уестърн</a></li>
-						<li><a href="" class="genre-nav-item">Руски</a></li>
-						<li><a href="" class="genre-nav-item">Биографичен</a></li>
-						<li><a href="" class="genre-nav-item">Криминален</a></li>
-						<li><a href="" class="genre-nav-item">Документален</a></li>
-						<li><a href="" class="genre-nav-item">Спортен</a></li>
-						<li><a href="" class="genre-nav-item">Индийски</a></li>
-					</ul>
-				</aside>
+				<aside class="genre-nav" id="genre-nav"></aside>
 
 				<section class="movies">
 					<div class="filters" id="filters">
@@ -105,35 +56,6 @@
 			</div>
 		</section>
 
-		<footer class="footer">
-			<section class="footer-content">
-				<section class="logo">
-					<a href="index.php" class="title">Filmi <span class="title-number">4k</span></a>
-				</section>
-				<section class="rights"><i class="fa-solid fa-copyright"></i> Всички права запазени. 2023</section>
-				<section class="contact-us-wrapper">
-					За разработчиците
-					<section class="contact-us">
-						<ul>
-							<li>
-								<a href="https://www.facebook.com/Bogi4a/" target="_blank"
-									><i class="fa-brands fa-facebook"></i> Богдан Косев</a
-								>
-							</li>
-							<li>
-								<a href="https://www.facebook.com/todor.stamatov.7" target="_blank"
-									><i class="fa-brands fa-facebook"></i> Тодор Стаматов</a
-								>
-							</li>
-							<li>
-								<a href="https://github.com/B-Kosev/filmi4k" target="_blank"
-									><i class="fa-brands fa-github"></i> Filmi 4k</a
-								>
-							</li>
-						</ul>
-					</section>
-				</section>
-			</section>
-		</footer>
+		<footer class="footer" id="footer"></footer>
 	</body>
 </html>
