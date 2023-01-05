@@ -3,6 +3,7 @@
 	<head>
 		<script src="https://kit.fontawesome.com/0138e10fbd.js" crossorigin="anonymous"></script>
 		<script src="./js/load-components.js" type="module"></script>
+		<script src="./js/movie.js" type="module"></script>
 
 		<link href="./css/movie.css" rel="stylesheet" />
 		<link href="./css/genre-nav.css" rel="stylesheet" />
@@ -17,66 +18,66 @@
 				<article class="movie">
 					<div class="movie-header">
 						<div class="poster">
-							<img src="./images/lionKing.webp" alt="lionKing-poster" />
+							<img src="" alt="" id="poster" />
 						</div>
 						<div class="screenshot">
-							<img src="./images/lionking-screenshot.jpg" alt="" />
+							<img src="" alt="" id="screenshot" />
 							<div class="movie-info">
-								<span class="title-en">The Lion King</span>
+								<span class="title-en" id="title-en-header"></span>
 								<br />
-								<span class="title-bg">Цар лъв</span>
+								<span class="title-bg" id="title-bg-header"></span>
 								<br />
-								<span class="year">1994</span>
+								<span class="year" id="year-header"></span>
 							</div>
 						</div>
 					</div>
 					<div class="movie-content">
 						<div class="meta-info">
 							<div class="title-rating-wrapper">
-								<h3 class="movie-title">The Lion King / Цар Лъв</h3>
+								<h3 class="movie-title" id="title"></h3>
 								<div class="rating-wrapper">
 									<button class="rate-btn" id="like"><i class="fa-regular fa-thumbs-up"></i></button>
-									<span class="rating">9.0 / 10</span>
+									<span class="rating" id="rating"></span>
 									<button class="rate-btn" id="dislike"><i class="fa-regular fa-thumbs-down"></i></button>
 								</div>
 							</div>
 							<div class="imdb-wrapper">
 								<i class="fa-brands fa-imdb"></i><b></b>
-								<span id="year">8.3</span>
+								<span id="imdb-rating"></span>
 							</div>
 							<div class="genre-wrapper">
 								<b>Жанр:</b>
-								<span id="genre-list">Екшън, Трилър, Драма</span>
+								<span id="genres-list"></span>
 							</div>
 							<div class="country-wrapper">
 								<b>Държава:</b>
-								<span id="country">САЩ</span>
+								<span id="countries-list"></span>
 							</div>
 							<div class="year-wrapper">
 								<b>Година:</b>
-								<span id="year">1994</span>
+								<span id="year"></span>
 							</div>
 							<div class="length-wrapper">
 								<b>Продължителност:</b>
-								<span id="year">88</span>
+								<span id="length"></span>
 								мин.
 							</div>
 							<div class="director-wrapper">
 								<b>Режисьор:</b>
-								<span id="director">Роб Минкоф, Роджър Алърс</span>
+								<span id="director"></span>
 							</div>
 							<div class="description-wrapper">
 								<b>Описание:</b>
 								<br />
-								Героичната история проследява епичните приключения на малкото лъвче Симба, което се бори да се
-								справи с отговорностите на възмъжаването и на своята предопределена роля на цар на джунглата.
+								<span id="description"></span>
 							</div>
 						</div>
 						<div class="trailer">
 							<iframe
+								id="trailer"
 								width="560"
 								height="315"
-								src="https://www.youtube.com/embed/lFzVJEksoDY"
+								src=""
 								title="YouTube video player"
 								frameborder="0"
 								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

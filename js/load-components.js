@@ -21,7 +21,7 @@ fetch("./components/footer.html")
 		footer.innerHTML = data;
 	});
 
-if (aside !== undefined) {
+if (aside !== null) {
 	fetch("./components/genre-nav.html")
 		.then((result) => result.text())
 		.then((data) => {
