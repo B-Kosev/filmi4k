@@ -13,7 +13,7 @@
 		<link href="./css/footer.css" rel="stylesheet" />
 		<link href="./css/auth.css" rel="stylesheet" />
 		<link href="./css/genre-nav.css" rel="stylesheet" />
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+		<link href="./css/movies.css" rel="stylesheet" />
 
 		<script src="https://kit.fontawesome.com/0138e10fbd.js" crossorigin="anonymous"></script>
 		<script src="/scripts/index.js" type="module"></script>
@@ -63,7 +63,45 @@
 						<li><a href="" class="genre-nav-item">Индийски</a></li>
 					</ul>
 				</aside>
-				<section class="cards" id="cards"></section>
+
+				<section class="movies">
+					<div class="filters" id="filters">
+						<ul>
+							<span>Сортирай по:</span>
+							<li class="filter">
+								<button class="filter-btn">
+									Дата <i class="fa-solid fa-arrow-down-short-wide"></i
+									><i class="fa-solid fa-arrow-down-wide-short"></i>
+								</button>
+							</li>
+							<li class="filter">
+								<button class="filter-btn">
+									Година <i class="fa-solid fa-arrow-down-short-wide"></i
+									><i class="fa-solid fa-arrow-down-wide-short"></i>
+								</button>
+							</li>
+							<li class="filter">
+								<button class="filter-btn">
+									Рейтинг <i class="fa-solid fa-arrow-down-short-wide"></i
+									><i class="fa-solid fa-arrow-down-wide-short"></i>
+								</button>
+							</li>
+							<li class="filter">
+								<button class="filter-btn">
+									IMDB Рейтинг <i class="fa-solid fa-arrow-down-short-wide"></i
+									><i class="fa-solid fa-arrow-down-wide-short"></i>
+								</button>
+							</li>
+							<li class="filter">
+								<button class="filter-btn">
+									Популярност <i class="fa-solid fa-arrow-down-short-wide"></i
+									><i class="fa-solid fa-arrow-down-wide-short"></i>
+								</button>
+							</li>
+						</ul>
+					</div>
+					<div class="cards" id="cards"></div>
+				</section>
 			</div>
 		</section>
 

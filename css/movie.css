@@ -2,7 +2,7 @@
 
 .content {
 	width: 60%;
-	margin: 50px auto 50px auto;
+	margin: 0 auto 50px auto;
 	padding: 2%;
 	display: flex;
 	justify-content: center;
@@ -29,6 +29,7 @@
 }
 
 .poster img {
+	display: block;
 	/* Ratio 2:3 */
 	width: 100%;
 	height: calc((100vw - 4rem) * (3 / 2));
@@ -40,6 +41,7 @@
 }
 
 .screenshot img {
+	display: block;
 	/* Ratio: 21:9 */
 	width: 100%;
 	height: calc((100vw - 4rem) * (9 / 21));
@@ -54,7 +56,6 @@
 	padding: 15px;
 	font-size: 1.5rem;
 	font-weight: bold;
-	text-transform: uppercase;
 	color: var(--text-on-dark-color);
 	background-color: rgba(0, 0, 0, 0.2);
 }
@@ -65,12 +66,57 @@
 	margin-right: auto;
 }
 
-.rating {
-	margin: 10px 0 10px 0;
+.title-rating-wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .meta-info div {
 	margin-top: 5px;
+}
+
+.title-rating-wrapper h3,
+.title-rating-wrapper div {
+	margin: 20px 0 20px 0;
+}
+
+.rating-wrapper {
+	width: 25%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.rate-btn {
+	width: 50px;
+	height: 50px;
+	font-size: 2rem;
+	border: none;
+	background-color: var(--bg-accented);
+}
+
+.rate-btn:hover {
+	cursor: pointer;
+}
+
+#like {
+	color: var(--primary-color);
+}
+
+#dislike {
+	color: rgb(255, 67, 67);
+}
+
+.rating {
+	padding: 15px;
+	font-size: 1.25rem;
+	border: 1px solid var(--text-main-color);
+	border-radius: 100px;
+}
+
+.imdb-wrapper > * {
+	font-size: 2rem;
 }
 
 .trailer {

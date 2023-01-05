@@ -77,7 +77,8 @@
 }
 
 .nav a,
-.auth a {
+.auth a,
+.auth span {
 	display: block;
 	padding: 0.5rem;
 	color: var(--text-main-color);
@@ -118,7 +119,7 @@
 }
 
 #greeting {
-	padding: 10px 0 0 0;
+	/* padding: 10px 0 0 0; */
 	text-transform: none;
 	color: var(--text-main-color);
 }

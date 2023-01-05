@@ -79,15 +79,19 @@
 						</div>
 					</div>
 					<div class="movie-content">
-						<h3 class="movie-title">The Lion King / Цар Лъв</h3>
-						<div class="rating">
-							<span class="fa fa-star"></span>
-							<span class="fa fa-star"></span>
-							<span class="fa fa-star"></span>
-							<span class="fa fa-star"></span>
-							<span class="fa fa-star"></span>
-						</div>
 						<div class="meta-info">
+							<div class="title-rating-wrapper">
+								<h3 class="movie-title">The Lion King / Цар Лъв</h3>
+								<div class="rating-wrapper">
+									<button class="rate-btn" id="like"><i class="fa-regular fa-thumbs-up"></i></button>
+									<span class="rating">9.0 / 10</span>
+									<button class="rate-btn" id="dislike"><i class="fa-regular fa-thumbs-down"></i></button>
+								</div>
+							</div>
+							<div class="imdb-wrapper">
+								<i class="fa-brands fa-imdb"></i><b></b>
+								<span id="year">8.3</span>
+							</div>
 							<div class="genre-wrapper">
 								<b>Жанр:</b>
 								<span id="genre-list">Екшън, Трилър, Драма</span>
@@ -98,6 +102,10 @@
 							</div>
 							<div class="year-wrapper">
 								<b>Година:</b>
+								<span id="year">1994</span>
+							</div>
+							<div class="length-wrapper">
+								<b>Продължителност:</b>
 								<span id="year">88</span>
 								мин.
 							</div>
@@ -105,7 +113,7 @@
 								<b>Режисьор:</b>
 								<span id="director">Роб Минкоф, Роджър Алърс</span>
 							</div>
-							<div class="description">
+							<div class="description-wrapper">
 								<b>Описание:</b>
 								<br />
 								Героичната история проследява епичните приключения на малкото лъвче Симба, което се бори да се

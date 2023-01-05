@@ -1,0 +1,60 @@
+/* ======== MAIN ======== */
+
+.content {
+	width: 80%;
+	margin: 0 auto 50px auto;
+	/* padding: 1%; */
+	display: flex;
+	justify-content: center;
+}
+
+.movies {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	background-color: var(--bg-accented);
+	box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ======== FILTERS ======== */
+
+.filters {
+	/* padding-bottom: 2%; */
+	color: var(--text-on-dark-color);
+	background-color: var(--text-main-color);
+	/* border-bottom: 1px solid var(--text-main-color); */
+	padding: 1% 2%;
+}
+
+.filters ul {
+	display: flex;
+	align-items: center;
+	margin: 0 0 0 16px;
+	padding: 0;
+}
+
+.filters ul li {
+	margin-left: 30px;
+}
+
+.filter-btn {
+	outline: none;
+	width: 160px;
+    height: 35px;
+    padding: 5px;
+	text-align: center;
+	background: var(--bg);
+	color: var(--text-main-color);
+	font-size: 1rem;
+	cursor: pointer;
+}
+
+.filter-btn:hover {
+	color: var(--text-on-dark-color);
+	background-color: var(--accent-color);
+}
+
+.filter-btn.selected {
+	color: var(--text-on-dark-color);
+	background-color: var(--accent-color);
+}
