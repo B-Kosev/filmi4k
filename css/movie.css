@@ -125,3 +125,45 @@
 	padding-top: 20px;
 	text-align: center;
 }
+
+/* ======== COMMENT SECTION ======== */
+#commentSection {
+	margin-top: 30px;
+}
+
+.commentFormElement {
+	display: block;
+	width: 100%;
+	margin-top: 8px;
+	height: 20px;
+}
+
+#comment {
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px solid grey;
+}
+
+#comment:focus {
+	outline: none;
+	border-bottom: 2px solid grey;
+}
+
+#submitCommentButton {
+	height: 30px;
+	width: 35px;
+	float: right;
+}
+
+#comments {
+	padding: 0;
+	margin-top: 50px;
+}
+
+#comments li {
+	margin-top: 15px;
+}
+
+#username {
+	font-weight: bold;
+}

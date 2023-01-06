@@ -1,4 +1,4 @@
-import { getMovie } from "./database.js";
+import { getMovie, updateMovie } from "./database.js";
 
 const id = new URL(document.location).searchParams.get("title");
 
@@ -47,3 +47,28 @@ director.innerHTML = movie.director;
 description.innerHTML = movie.description;
 
 trailer.src = movie.trailerUrl;
+
+movie.comments.forEach((element) => {
+	document.getElementById("comments").innerHTML += `
+	<li>
+		<span id="username">${element.username}</span>
+			<br />
+		<span id="userComment">${element.comment}</span>
+	</li>`;
+});
+
+document.getElementById("commentForm"),
+	addEventListener("submit", (event) => {
+		event.preventDefault();
+		const username = localStorage.getItem("username");
+		const comment = document.getElementById("comment").value;
+		movie.comments.push({ username, comment });
+		updateMovie(movie.id, movie);
+		document.getElementById("comments").innerHTML += `
+		<li>
+			<span id="username">${username}</span>
+			<br />
+			<span id="userComment">${comment}</span>
+		</li>`;
+		document.getElementById("comment").value = "";
+	});

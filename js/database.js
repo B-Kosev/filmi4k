@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
-import { getDatabase, ref, set, push, get, onValue } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
+import { getDatabase, ref, set, push, get, update } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -61,6 +61,12 @@ export const addMovies = () => {
 		posterUrl: "./images/lionKing.webp",
 		screenshotUrl: "./images/lionking-screenshot.jpg",
 		trailerUrl: "https://www.youtube.com/embed/lFzVJEksoDY",
+		comments: [
+			{
+				username: "tgstamatov",
+				comment: "my favourite movie",
+			},
+		],
 	});
 
 	set(ref(database, "movies/interstellar"), {
@@ -176,4 +182,9 @@ export const addMovies = () => {
 		screenshotUrl: "./images/butterfly-screenshot.jpg",
 		trailerUrl: "https://www.youtube.com/embed/B8_dgqfPXFg",
 	});
+};
+
+export const updateMovie = (id, movieInfo) => {
+	const movieRef = ref(database, "movies/" + id);
+	set(movieRef, movieInfo);
 };
