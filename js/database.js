@@ -21,9 +21,6 @@ export const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
 
-const dataRef = ref(database, "users");
-const usersRef = push(dataRef);
-
 export const addUser = (username, email, password) => {
 	const dataRef = ref(database, "users/" + username);
 	const usersRef = push(dataRef);
@@ -32,6 +29,18 @@ export const addUser = (username, email, password) => {
 		email,
 		password,
 	});
+};
+
+export const getMovies = async () => {
+	const moviesRef = ref(database, "movies");
+	const movies = await get(moviesRef);
+	return movies.val();
+};
+
+export const getMovie = async (id) => {
+	const movieRef = ref(database, "movies/" + id);
+	const movie = await get(movieRef);
+	return movie.val();
 };
 
 export const addMovies = () => {
