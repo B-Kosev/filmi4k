@@ -2,53 +2,101 @@ import { getMovie, updateMovie } from "./database.js";
 
 const id = new URL(document.location).searchParams.get("title");
 
-const poster = document.getElementById("poster");
-const screenshot = document.getElementById("screenshot");
-const titleEnHeader = document.getElementById("title-en-header");
-const titleBgHeader = document.getElementById("title-bg-header");
-const yearHeader = document.getElementById("year-header");
-
-const title = document.getElementById("title");
-const rating = document.getElementById("rating");
-const imdbRating = document.getElementById("imdb-rating");
-const genresList = document.getElementById("genres-list");
-const countriesList = document.getElementById("countries-list");
-const year = document.getElementById("year");
-const length = document.getElementById("length");
-const director = document.getElementById("director");
-const description = document.getElementById("description");
-
-const trailer = document.getElementById("trailer");
-
 const movie = await getMovie(id);
 
-poster.src = movie.posterUrl;
-poster.alt = movie.title;
-screenshot.src = movie.screenshotUrl;
-screenshot.alt = movie.title;
-titleEnHeader.innerHTML = movie.title_en;
-titleBgHeader.innerHTML = movie.title_bg;
-yearHeader.innerHTML = movie.year;
+const movieArticle = document.getElementById("movie");
 
-title.innerHTML = `${movie.title_en} / ${movie.title_bg}`;
-rating.innerHTML = `${movie.rating} / 10`;
-imdbRating.innerHTML = movie.imdb_rating;
-movie.genres.forEach((genre) => {
-	genresList.innerHTML += `${genre}, `;
-});
-genresList.innerHTML = genresList.innerHTML.slice(0, -2);
-movie.countries.forEach((country) => {
-	countriesList.innerHTML += `${country}, `;
-});
-countriesList.innerHTML = countriesList.innerHTML.slice(0, -2);
-year.innerHTML = movie.year;
-length.innerHTML = movie.length;
-director.innerHTML = movie.director;
-description.innerHTML = movie.description;
+movieArticle.innerHTML = `<div class="movie-header">
+						<div class="poster">
+							<img src="${movie.posterUrl}" alt="${movie.title}" />
+						</div>
+						<div class="screenshot">
+							<img src="${movie.screenshotUrl}" alt="${movie.title}" />
+							<div class="movie-info">
+								<span class="title-en">${movie.title_en}</span>
+								<br />
+								<span class="title-bg">${movie.title_bg}</span>
+								<br />
+								<span class="year">${movie.year}</span>
+							</div>
+						</div>
+					</div>
+					<div class="movie-content">
+						<div class="meta-info">
+							<div class="title-rating-wrapper">
+								<h3 class="movie-title">${movie.title_en} / ${movie.title_bg}</h3>
+								<div class="rating-wrapper">
+									<button class="rate-btn" id="like"><i class="fa-regular fa-thumbs-up"></i></button>
+									<span class="rating">${movie.rating} / 10</span>
+									<button class="rate-btn" id="dislike"><i class="fa-regular fa-thumbs-down"></i></button>
+								</div>
+							</div>
+							<div class="imdb-wrapper">
+								<i class="fa-brands fa-imdb"></i><b></b>
+								<span>${movie.imdb_rating}</span>
+							</div>
+							<div class="genre-wrapper">
+								<b>Жанр:</b>
+								<span>${movie.genres.join(", ")}</span>
+							</div>
+							<div class="country-wrapper">
+								<b>Държава:</b>
+								<span>${movie.countries.join(", ")}</span>
+							</div>
+							<div class="year-wrapper">
+								<b>Година:</b>
+								<span>${movie.year}</span>
+							</div>
+							<div class="length-wrapper">
+								<b>Продължителност:</b>
+								<span>${movie.length}</span>
+								мин.
+							</div>
+							<div class="director-wrapper">
+								<b>Режисьор:</b>
+								<span>${movie.director}</span>
+							</div>
+							<div class="description-wrapper">
+								<b>Описание:</b>
+								<br />
+								<span>${movie.description}</span>
+							</div>
+						</div>
+						<div class="trailer">
+							<iframe
+								width="560"
+								height="315"
+								src="${movie.trailerUrl}"
+								title="YouTube video player"
+								frameborder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+								allowfullscreen
+							></iframe>
+						</div>
+						<div id="commentSection">
+							<h4>Коментари</h4>
+							<form id="commentForm">
+								<input
+									class="commentFormElement"
+									type="text"
+									placeholder="Добавете коментар..."
+									name="comment"
+									id="comment"
+									required
+								/>
+								<input
+									class="commentFormElement btn"
+									id="submitCommentButton"
+									type="submit"
+									value="Коментар"
+									name="addComment"
+								/>
+							</form>
+							<ul id="comments"></ul>
+						</div>
+					</div>`;
 
-trailer.src = movie.trailerUrl;
-
-movie.comments.forEach((element) => {
+movie.comments?.forEach((element) => {
 	document.getElementById("comments").innerHTML += `
 	<li>
 		<span id="username">${element.username}</span>
@@ -62,7 +110,7 @@ document.getElementById("commentForm"),
 		event.preventDefault();
 		const username = localStorage.getItem("username");
 		const comment = document.getElementById("comment").value;
-		movie.comments.push({ username, comment });
+		movie.commets === undefined ? (movie.comments = [{ username, comment }]) : movie.comments.push({ username, comment });
 		updateMovie(movie.id, movie);
 		document.getElementById("comments").innerHTML += `
 		<li>

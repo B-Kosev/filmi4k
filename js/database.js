@@ -57,7 +57,6 @@ export const addMovies = () => {
 			"Героичната история проследява епичните приключения на малкото лъвче Симба, което се бори да се справи с отговорностите на възмъжаването и на своята предопределена роля на цар на джунглата.",
 		rating: 9,
 		imdb_rating: 8.3,
-		comments: [],
 		posterUrl: "./images/lionKing.webp",
 		screenshotUrl: "./images/lionking-screenshot.jpg",
 		trailerUrl: "https://www.youtube.com/embed/lFzVJEksoDY",
