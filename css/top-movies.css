@@ -12,7 +12,6 @@
 
 .cardTop a {
 	all: unset;
-	position: absolute;
 	display: block;
 	height: 100%;
 	width: 100%;

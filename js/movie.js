@@ -97,12 +97,13 @@ movieArticle.innerHTML = `<div class="movie-header">
 					</div>`;
 
 movie.comments?.forEach((element) => {
-	document.getElementById("comments").innerHTML += `
+	document.getElementById("comments").innerHTML =
+		`
 	<li>
 		<span id="username">${element.username}</span>
 			<br />
 		<span id="userComment">${element.comment}</span>
-	</li>`;
+	</li>` + document.getElementById("comments").innerHTML;
 });
 
 document.getElementById("commentForm"),
@@ -110,13 +111,14 @@ document.getElementById("commentForm"),
 		event.preventDefault();
 		const username = localStorage.getItem("username");
 		const comment = document.getElementById("comment").value;
-		movie.commets === undefined ? (movie.comments = [{ username, comment }]) : movie.comments.push({ username, comment });
+		movie.comments === undefined ? (movie.comments = [{ username, comment }]) : movie.comments.push({ username, comment });
 		updateMovie(movie.id, movie);
-		document.getElementById("comments").innerHTML += `
+		document.getElementById("comments").innerHTML =
+			`
 		<li>
 			<span id="username">${username}</span>
 			<br />
 			<span id="userComment">${comment}</span>
-		</li>`;
+		</li>` + document.getElementById("comments").innerHTML;
 		document.getElementById("comment").value = "";
 	});
