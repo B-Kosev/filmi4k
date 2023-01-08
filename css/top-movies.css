@@ -1,0 +1,98 @@
+.cardTop {
+	height: 72px;
+	display: block;
+	width: 100%;
+	margin: 1rem;
+	font-size: 1.2rem;
+	background-color: var(--bg);
+	box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.6);
+	transition: background-color, transform 0.5s ease;
+	cursor: pointer;
+}
+
+.cardTop a {
+	all: unset;
+	position: absolute;
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+
+#position1 {
+	height: 150px;
+}
+
+#position1 #poster {
+	height: 128px;
+	width: 85px;
+	margin: 11px 0;
+	margin-left: 8px;
+}
+
+#position1 #screenshot {
+	height: 128px;
+	width: 299px;
+	margin: 11px 0;
+}
+
+#position2 {
+	height: 130px;
+}
+
+#position2 #poster {
+	height: 110px;
+	width: 73px;
+	margin: 10px 0;
+	margin-left: 8px;
+}
+
+#position2 #screenshot {
+	height: 110px;
+	width: 256px;
+	margin: 10px 0;
+}
+
+#position3 {
+	height: 100px;
+}
+
+#position3 #poster {
+	height: 84px;
+	width: 56px;
+	margin: 8px 0;
+	margin-left: 8px;
+}
+
+#position3 #screenshot {
+	height: 84px;
+	width: 196px;
+	margin: 8px 0;
+}
+
+.cardTop * {
+	vertical-align: middle;
+}
+
+.cardTop:hover {
+	background-color: var(--primary-color);
+}
+
+#poster {
+	height: 64px;
+	width: 43px;
+	margin: 4px 0 4px 8px;
+}
+
+#screenshot {
+	height: 64px;
+	width: 150px;
+	margin: 4px 0 4px 0;
+}
+
+span {
+	margin-left: 16px;
+}
+
+#images {
+	display: inline;
+}
