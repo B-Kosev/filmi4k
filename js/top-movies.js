@@ -15,10 +15,10 @@ for (let i = 0; i < numberOfMovies; i++) {
     <section class="cardTop" id="position${i + 1}">
 		<a href="movie.html?title=${movies[i].id}">
 			<span id="position">${i + 1}</span>
-				<div id="images">
-                    <img id="poster" src="${movies[i].posterUrl}" />
-					<img id="screenshot" src="${movies[i].screenshotUrl}" />
-				</div>
+			<div id="images">
+				<img id="poster" src="${movies[i].posterUrl}" />
+				<img id="screenshot" src="${movies[i].screenshotUrl}" />
+			</div>
 			<span>${movies[i].title_en}</span>
 			<span>${movies[i].title_bg}</span>
 			<span>${movies[i].year}</span>

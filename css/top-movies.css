@@ -1,6 +1,7 @@
 .cardTop {
 	height: 72px;
-	display: block;
+	display: flex;
+	flex-direction: column;
 	width: 100%;
 	margin: 1rem;
 	font-size: 1.2rem;
@@ -12,7 +13,9 @@
 
 .cardTop a {
 	all: unset;
-	display: block;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
 	height: 100%;
 	width: 100%;
 }
@@ -93,5 +96,6 @@ span {
 }
 
 #images {
-	display: inline;
+	display: flex;
+	gap: 6px;
 }
