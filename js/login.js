@@ -19,7 +19,7 @@ const loginUser = (event) => {
 
 	get(usersRef).then((info) => {
 		const user = info.val();
-		if (!user || user[Object.keys(user)[0]].password != password.value) {
+		if (!user || user.password != password.value) {
 			document.getElementById("credentials-err").classList.remove("hidden");
 		} else {
 			localStorage.setItem("username", `${username.value}`);

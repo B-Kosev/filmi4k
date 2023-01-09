@@ -109,7 +109,7 @@
 	color: rgb(255, 67, 67);
 }
 
-.rating {
+#rating {
 	padding: 15px;
 	font-size: 1.25rem;
 	border: 1px solid var(--text-main-color);
