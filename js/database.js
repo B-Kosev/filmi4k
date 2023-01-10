@@ -206,6 +206,194 @@ export const addMovies = () => {
 		screenshotUrl: "./images/butterfly-screenshot.jpg",
 		trailerUrl: "https://www.youtube.com/embed/B8_dgqfPXFg",
 	});
+
+	set(ref(database, "movies/thegodfather"), {
+		id: "thegodfather",
+		title_en: "The Godfather",
+		title_bg: "Кръстникът",
+		genres: ["Драма", "Криминален"],
+		countries: ["САЩ"],
+		year: 1972,
+		length: 175,
+		director: "Франсис Форд Копола",
+		description:
+			"Франсис Форд Копола представя сагата за фамилията Корлеоне с Марлон Брандов ролята на Кръстника Дон Вито. Копола рисува смразяващата картина на възхода на една сицилианска фамилия, на загубата на властта и влиянието и в Америка, както и предаването им от баща на син. Копола майсторски балансира сцените от семейния живот и отвратителния престъпен бизнес, в който са въвлечени членовете на семейството. Заснет по романа-бестселър на Марио Пузо, този брилянтен филм получи през 1972г. “Оскар” за най-добър филм",
+		likes: 962,
+		dislikes: 168,
+		rating: 7.8,
+		imdb_rating: 9.2,
+		comments: [],
+		posterUrl: "./images/thegodfather.jpg",
+		screenshotUrl: "./images/thegodfather-screenshot.jpg",
+		trailerUrl: "https://www.youtube.com/embed/UaVTIH8mujA",
+	});
+
+	set(ref(database, "movies/schindler"), {
+		id: "schindler",
+		title_en: "Schindler's List",
+		title_bg: "Списъкът на Шиндлер",
+		genres: ["Драма", "Исторически", "Военен"],
+		countries: ["САЩ"],
+		year: 1993,
+		length: 195,
+		director: "Стивън Спилбърг",
+		description:
+			"Оскар Шиндлер е голям немски бизнесмен, който отваря фабрика в Полша през Втората Световна Война. Ставайки свидетел на зверствата от страна на нацистите върху еврейското население обаче, той става изключително човечев и превръща фабриката си в лагер на спасението за евреите. Филма е базиран на истинската история на Оскар Шиндлер, който успява да спаси близо 1100 евреи от обгазяване в лагерите в Аушвиц.",
+		likes: 694,
+		dislikes: 82,
+		rating: 8.9,
+		imdb_rating: 8.9,
+		comments: [],
+		posterUrl: "./images/schindler.jpg",
+		screenshotUrl: "./images/schindler-screenshot.jpg",
+		trailerUrl: "https://www.youtube.com/embed/mxphAlJID9U",
+	});
+
+	set(ref(database, "movies/platoon"), {
+		id: "platoon",
+		title_en: "Platoon",
+		title_bg: "Взвод",
+		genres: ["Драма", "Екшън", "Военен"],
+		countries: ["САЩ"],
+		year: 1986,
+		length: 120,
+		director: "Оливър Стоун",
+		description:
+			'Носител на 4 награди Оскар®, "Взвод" е филм, който "показва войната от гледната точка на тези, които я водят - самите войници - без да залъгва зрителите, че в нея има нещо забавно" Роджър Ебърт. Сценарист и режисьор е носителят на Оскар® Оливър Стоун, като историята във филма е базирана на личните му преживявания по време на войната. Крис Тейлър (Чарли Шийн) е млад американец, който скоро след пристигането си във Виетнам открива, че трябва да се бори не само с виетконгците, но и със страха, изтощението и гнева си. Ситуацията допълнително се нажежава и от съперничеството между командващите взвода сержанти (номинираният за Оскар Том Беринджър и Уилям Дефо). Непрекъснатата борба, вътрешна и външна, разкъсва Тейлър, докато не свежда съществуването му само до едно - запазването на собствения му живот.',
+		likes: 261,
+		dislikes: 29,
+		rating: 9.0,
+		imdb_rating: 8.1,
+		comments: [],
+		posterUrl: "./images/platoon.jpg",
+		screenshotUrl: "./images/platoon-screenshot.jpg",
+		trailerUrl: "https://www.youtube.com/embed/R8weLPF4qBQ",
+	});
+
+	set(ref(database, "movies/thethinredline"), {
+		id: "thethinredline",
+		title_en: "The Thin Red Line",
+		title_bg: "Тънка червена линия",
+		genres: ["Драма", "Екшън", "Военен"],
+		countries: ["САЩ"],
+		year: 1998,
+		length: 170,
+		director: "Терънс Малик",
+		description:
+			"Невероятен актьорски състав, сред който блестят Шон Пен, Ник Нолти и Уди Харълсън, се хвърля в битка в тази завладяващ реалистичен филм за войниците и моралния хаос на Тихоокеанския фронт по време на Втората световна война. Първият филм на големия режисьор Терънс Малик след 20-годишно оттегляне от киното, ТЪНКА ЧЕРВЕНА ЛИНИЯ е шедьовър, определен от критиката като “най-добрия съвременен военен филм!”",
+		likes: 235,
+		dislikes: 33,
+		rating: 8.8,
+		imdb_rating: 7.6,
+		comments: [],
+		posterUrl: "./images/thethinredline.jpg",
+		screenshotUrl: "./images/thethinredline-screenshot.jpg",
+		trailerUrl: "https://www.youtube.com/embed/mKl5_OxKBn8",
+	});
+
+	set(ref(database, "movies/apocalypsenow"), {
+		id: "apocalypsenow",
+		title_en: "Apocalypse Now",
+		title_bg: "Апокалипсис сега",
+		genres: ["Драма", "Екшън", "Военен"],
+		countries: ["САЩ"],
+		year: 1979,
+		length: 147,
+		director: "Франс Форд Копола",
+		description:
+			"Шокиращата визия на Копола за човешкото сърце на мрака е разкрита чрез странната лудост на Виетнамската война. Лейтенант Уилард (Мартин Шийн) получава заповед да издири и унищожи мистериозния полковник Курц (Марлон Брандо), който се е оттеглил дълбоко в джунглите. Мисията на Уилард се превръща в епично пътуване към себе си, за да открие в крайна сметка нещо от своята душа в сложната личност на полковник Курц.",
+		likes: 150,
+		dislikes: 31,
+		rating: 8.3,
+		imdb_rating: 8.5,
+		comments: [],
+		posterUrl: "./images/apocalypsenow.jpg",
+		screenshotUrl: "./images/apocalypsenow-screenshot.jpg",
+		trailerUrl: "https://www.youtube.com/embed/FTjG-Aux_yQ",
+	});
+
+	set(ref(database, "movies/thethinredline"), {
+		id: "thethinredline",
+		title_en: "The Thin Red Line",
+		title_bg: "Тънка червена линия",
+		genres: ["Драма", "Екшън", "Военен"],
+		countries: ["САЩ"],
+		year: 1998,
+		length: 170,
+		director: "Терънс Малик",
+		description: "",
+		likes: 261,
+		dislikes: 29,
+		rating: 9.0,
+		imdb_rating: 8.1,
+		comments: [],
+		posterUrl: "./images/thethinredline.jpg",
+		screenshotUrl: "./images/thethinredline-screenshot.jpg",
+		trailerUrl: "https://www.youtube.com/embed/R8weLPF4qBQ",
+	});
+
+	set(ref(database, "movies/privateryan"), {
+		id: "privateryan",
+		title_en: "Saving Private Ryan",
+		title_bg: "Спасяването на редник Райън",
+		genres: ["Драма", "Екшън", "Военен"],
+		countries: ["САЩ"],
+		year: 1998,
+		length: 169,
+		director: "Стивън Спилбърг",
+		description:
+			"Разказана през очите на взвод американски войници, историята започва с историческия ден на нашествието на съюзниците в Нормандия, когато бойците дебаркират на морския бряг с опасна специална мисия. Капитан Джон Милър (Том Ханкс) трябва да отведе своите войници отвъд фронтовата линия, за да открият редник Джеймс Райън, чиито трима братя са загинали в битка. Изправени пред непреодолими пречки, мъжете се разбунтуват сред възложената им заповед. Защо трябва осем души да рискуват живота си само заради един войник? Сред бруталната реалност на войната всеки от тях търси отговор за себе си - и сила да преодолее несигурното бъдеще с чест, достойнство и смелост.",
+		likes: 419,
+		dislikes: 43,
+		rating: 9.1,
+		imdb_rating: 8.6,
+		comments: [],
+		posterUrl: "./images/privateryan.jpg",
+		screenshotUrl: "./images/privateryan-screenshot.jpg",
+		trailerUrl: "https://www.youtube.com/embed/9CiW_DgxCnQ",
+	});
+
+	set(ref(database, "movies/exodus"), {
+		id: "exodus",
+		title_en: "Exodus: Gods and Kings",
+		title_bg: "Изход: Богове и Царе",
+		genres: ["Драма", "Екшън", "Приключенски"],
+		countries: ["САЩ", "Великобритания", "Испания"],
+		year: 2014,
+		length: 150,
+		director: "Ридли Скот",
+		description:
+			"Приключенският епос „Изход: Богове и Царе“ е историята за смелостта на един човек да се изправи срещу мощта на една империя.По времето на фараоните, когато египтяните са живели добре, а еврейските роби са били измъчвани, Царят управлява всички в Египет с двамата си синове, Рамзес истинския му син, и Мойсей приемния му син. Фараонът цар иска да избере новия владетел на Египет заради влошеното си здраве. Рамзес се възкачва на трона и открива, че брат му е роден евреин. Моисей се опитва да намери себе си и се стреми да помага на неговия народ. Двамата братя сега се конкурират за Египет, един брат роден да управлява, и друг брат роден да се противопостави на правилата и да поведе народа си към славата.",
+		likes: 260,
+		dislikes: 42,
+		rating: 8.6,
+		imdb_rating: 6.2,
+		comments: [],
+		posterUrl: "./images/exodus.jpg",
+		screenshotUrl: "./images/exodus-screenshot.jpg",
+		trailerUrl: "https://www.youtube.com/embed/t-8YsulfxVI",
+	});
+
+	set(ref(database, "movies/thepassionofthechrist"), {
+		id: "thepassionofthechrist",
+		title_en: "The Passion of the Christ",
+		title_bg: "Страстите Христови",
+		genres: ["Драма", "Исторически"],
+		countries: ["САЩ"],
+		year: 2004,
+		length: 126,
+		director: "Мел Гибсън",
+		description:
+			"Страстите – на латински означава страдание, но също така дълбока и съвършена любов – и отпраща към мъчителните и в крайна сметка изкупителни събития от последните 12 часа от земния живот на Исус Христос.Мел Гибсън вдъхва живот на вечната история с безкомпромисния реализъм и суровата емоция на съвременното кино.Сценарият е създаден по текстове от библейските евангелия на Матей, Марко, Лука и Йоан.",
+		likes: 500,
+		dislikes: 0,
+		rating: 10.0,
+		imdb_rating: 7.1,
+		comments: [],
+		posterUrl: "./images/thepassionofthechrist.jpg",
+		screenshotUrl: "./images/thepassionofthechrist-screenshot.jpg",
+		trailerUrl: "https://www.youtube.com/embed/4Aif1qEB_JU",
+	});
 };
 
 export const updateMovie = (id, movieInfo) => {

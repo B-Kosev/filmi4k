@@ -9,6 +9,7 @@
 	box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.6);
 	transition: background-color, transform 0.5s ease;
 	cursor: pointer;
+	transition: transform 0.2s;
 }
 
 .cardTop a {
@@ -77,6 +78,7 @@
 
 .cardTop:hover {
 	background-color: var(--primary-color);
+	transform: scale(1.05);
 }
 
 #poster {
