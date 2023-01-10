@@ -99,3 +99,11 @@ span {
 	display: flex;
 	gap: 6px;
 }
+
+#selectedButton {
+	background-color: var(--accent-color);
+}
+
+#movieTitle {
+	font-weight: bold;
+}

@@ -46,12 +46,18 @@ for (let i = 0; i < sortButtons.length; i++) {
 		if (descending.classList.contains("hidden")) {
 			ascending.classList.add("hidden");
 			descending.classList.remove("hidden");
-			movies = movies.sort((movie1, movie2) => (movie1[criteria] > movie2[criteria] ? -1 : 1));
+			movies =
+				criteria === "popularity"
+					? movies.sort((movie1, movie2) => (movie1.likes + movie1.dislikes > movie2.likes + movie2.dislikes ? -1 : 1))
+					: movies.sort((movie1, movie2) => (movie1[criteria] > movie2[criteria] ? -1 : 1));
 			displayMovies(movies);
 		} else {
 			ascending.classList.remove("hidden");
 			descending.classList.add("hidden");
-			movies = movies.sort((movie1, movie2) => (movie1[criteria] > movie2[criteria] ? 1 : -1));
+			movies =
+				criteria === "popularity"
+					? movies.sort((movie1, movie2) => (movie1.likes + movie1.dislikes > movie2.likes + movie2.dislikes ? 1 : -1))
+					: movies.sort((movie1, movie2) => (movie1[criteria] > movie2[criteria] ? 1 : -1));
 			displayMovies(movies);
 		}
 	});
