@@ -23,7 +23,7 @@ const loginUser = (event) => {
 			document.getElementById("credentials-err").classList.remove("hidden");
 		} else {
 			localStorage.setItem("username", `${username.value}`);
-			window.location.replace("./index.html");
+			window.location.replace("./movies.html");
 		}
 	});
 };

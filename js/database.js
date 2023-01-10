@@ -48,6 +48,12 @@ export const getUser = async (id) => {
 	return user.val();
 };
 
+export const getUsers = async () => {
+	const usersRef = ref(database, "users");
+	const users = await get(usersRef);
+	return users.val();
+};
+
 export const addMovies = () => {
 	set(ref(database, "movies/thelionking"), {
 		id: "thelionking",

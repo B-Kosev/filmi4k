@@ -101,22 +101,31 @@ movie.comments?.forEach((element) => {
 		`
 	<li>
 		<span id="username">${element.username}</span>
+		<span id="date">${element.date}</span>
 			<br />
 		<span id="userComment">${element.comment}</span>
 	</li>` + document.getElementById("comments").innerHTML;
 });
 
+const currentUser = await getUser(localStorage.getItem("username"));
+if (!currentUser) document.getElementById("commentForm").classList.add("hidden");
+
 document.getElementById("commentForm"),
 	addEventListener("submit", (event) => {
 		event.preventDefault();
+		if (!currentUser) return;
 		const username = localStorage.getItem("username");
 		const comment = document.getElementById("comment").value;
-		movie.comments === undefined ? (movie.comments = [{ username, comment }]) : movie.comments.push({ username, comment });
+		const date = new Date().toLocaleString();
+		movie.comments === undefined
+			? (movie.comments = [{ username, comment, date }])
+			: movie.comments.push({ username, comment, date });
 		updateMovie(movie.id, movie);
 		document.getElementById("comments").innerHTML =
 			`
 		<li>
 			<span id="username">${username}</span>
+			<span id="date">${date}</span>
 			<br />
 			<span id="userComment">${comment}</span>
 		</li>` + document.getElementById("comments").innerHTML;
@@ -129,19 +138,18 @@ const dislikeButton = document.getElementById("dislike");
 const likeIcon = document.getElementById("likeIcon");
 const dislikeIcon = document.getElementById("dislikeIcon");
 
-const currentUser = await getUser(localStorage.getItem("username"));
-
-if (currentUser.likedMovies?.includes(movie.id)) {
+if (currentUser?.likedMovies?.includes(movie.id)) {
 	likeIcon.classList.remove("fa-regular");
 	likeIcon.classList.add("fa-solid");
 }
 
-if (currentUser.dislikedMovies?.includes(movie.id)) {
+if (currentUser?.dislikedMovies?.includes(movie.id)) {
 	dislikeIcon.classList.remove("fa-regular");
 	dislikeIcon.classList.add("fa-solid");
 }
 
 likeButton.addEventListener("click", () => {
+	if (!currentUser) return;
 	if (dislikeIcon.classList.contains("fa-solid")) {
 		dislikeIcon.classList.remove("fa-solid");
 		dislikeIcon.classList.add("fa-regular");
@@ -162,11 +170,11 @@ likeButton.addEventListener("click", () => {
 	movie.rating = ((10 * movie.likes) / (movie.dislikes + movie.likes)).toFixed(1);
 	document.getElementById("rating").innerHTML = `${movie.rating} / 10`;
 	updateMovie(movie.id, movie);
-	debugger;
 	updateUser(currentUser.username, currentUser);
 });
 
 dislikeButton.addEventListener("click", () => {
+	if (!currentUser) return;
 	if (likeIcon.classList.contains("fa-solid")) {
 		likeIcon.classList.remove("fa-solid");
 		likeIcon.classList.add("fa-regular");
