@@ -82,6 +82,7 @@ movieArticle.innerHTML = `<div class="movie-header">
 									placeholder="Добавете коментар..."
 									name="comment"
 									id="comment"
+									maxlength="200"
 									required
 								/>
 								<input
