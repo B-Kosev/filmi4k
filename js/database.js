@@ -7,9 +7,10 @@ import { getDatabase, ref, set, push, get, update } from "https://www.gstatic.co
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-export const firebaseConfig = {
+const firebaseConfig = {
 	apiKey: "AIzaSyCq-wsUDatEm51kGUkVFF5aCJgXW4exlUQ",
 	authDomain: "flimi4k.firebaseapp.com",
+	databaseURL: "https://flimi4k-default-rtdb.firebaseio.com",
 	projectId: "flimi4k",
 	storageBucket: "flimi4k.appspot.com",
 	messagingSenderId: "651125898782",

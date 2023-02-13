@@ -14,6 +14,6 @@ window.onload = function () {
 
 	document.getElementById("logout-button").addEventListener("click", () => {
 		localStorage.removeItem("username");
-		window.location.replace("./index.html");
+		window.location.replace("./movies.html");
 	});
 };
